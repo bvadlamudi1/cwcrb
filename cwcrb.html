@@ -1,0 +1,25 @@
+<html>
+  <script src="https://cowork-bitwisecommunity.cs1.force.com/lightning/lightning.out.js"></script>
+
+  <div data-lightning-out="true"></div>
+  <div id="LightningAppDivId">
+    <!-- Lightning Component will be included here. -->
+  </div>
+  <script>
+    $Lightning.use(
+      "c:CWConferenceRoomBookingPublic", // name of the Lightning app
+      function () {
+        // Callback once framework and app loaded
+        $Lightning.createComponent(
+          "c:cwConferenceRoomBooking", // top-level component of your app
+          {}, // attributes to set on the component when created
+          "LightningAppDivId", // the DOM location to insert the component
+          function (cmp) {
+            // callback when component is created and active on the page
+          }
+        );
+      },
+      "https://cowork-bitwisecommunity.cs1.force.com" // Experience Cloud site endpoint
+    );
+  </script>
+</html>
